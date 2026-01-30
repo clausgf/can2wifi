@@ -1,4 +1,4 @@
-# Can2wifi
+# can2wifi
 
 This project uses the popular ESP32 and a CAN transceiver to bridge the CAN bus to WiFi, allowing remote monitoring and control of CAN bus networks over TCP/IP. It is intended to connect PC software like [Rocrail](https://www.rocrail.online/) via WiFi to the CAN bus of a Märklin/Trix 60113 Gleisbox which comes with the Mobile Station 2. 
 
@@ -21,14 +21,15 @@ I used the following web sites for inspiration:
 
 - ESP32 development board (I used the devkit-v1)
 - CAN transceiver (I used a SN65HVD230 CAN breakout board from Waveshare)
-- Wire the `CAN_TX`, `CAN_RX`, `3V3` and `GND` pins of the ESP32 to the CAN transceiver
+- Wire the `CAN_TX`, `CAN_RX`, `3V3` and `GND` pins of the ESP32 to the CAN transceiver. I used Pin 33 for `CAN_TX`and Pin 32 for `CAN_RX`.
 - Wire `CANL`, `CANH` (I also connected `GND`) of the CAN transceiver to your Gleisbox
 - Some photos of my installation are found below
 
-## Software setup
+## Getting started
 
-1. PlatformIO is used for build management
-1. Clone the repository
+1. Get and wire the necessary Hardware as described above.
+1. Install [PlatformIO](https://platformio.org) for build management.
+1. Clone the repository.
 1. Copy [include/secrets-template.h](include/secrets-template.h) to `include/secrets.h` and adapt `WIFI_SSID`, `WIFI_PASS` and `OTA_PASSWORD` to your setup.
 1. Also configure `CAN_TX_PIN` and `CAN_RX_PIN` in `include/config.h` to match your wiring.
 1. Build the firmware and upload to your ESP32 via USB
@@ -61,3 +62,15 @@ TCP->CAN  ID=0x00009B51 DLC=5 DATA=00 00 00 00 01 | P=0 ADDR=0x9B51 R=0 CMD=00 D
 
 ## Photos of my hardware
 
+I started by putting everything on a breadboard;
+
+![Breadboard](docs/breadboard.jpg)
+
+The breadboard design was then put on a small perfboard and fits nicely into the Gleisbox / track box:
+
+![Overview](docs/overview.jpg)
+
+![Back side](docs/board_backside.jpg)
+The wire for the ground connection is not shown on the photo but was also wired to the back side of the board (e.g. to the six thick soldering points of the connectors).
+
+![Front side](docs/board_frontside.jpg)

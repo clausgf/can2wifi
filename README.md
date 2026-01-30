@@ -66,11 +66,11 @@ I started by putting everything on a breadboard;
 
 ![Breadboard](docs/breadboard.jpg)
 
-The breadboard design was then put on a small perfboard and fits nicely into the Gleisbox / track box:
+After testing the breadboard design was put on a small perfboard which fits nicely into the Gleisbox / track box:
 
 ![Overview](docs/overview.jpg)
 
-![Back side](docs/board_backside.jpg)
-The wire for the ground connection is not shown on the photo but was also wired to the back side of the board (e.g. to the six thick soldering points of the connectors).
+The wire for the ground connection is not shown on the photo but was also wired to the back side of the board (e.g. to the six thick soldering points of the connectors):
 
+![Back side](docs/board_backside.jpg)
 ![Front side](docs/board_frontside.jpg)

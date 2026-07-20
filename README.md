@@ -1,6 +1,6 @@
-# can2wifi
+# Gleisbox2wifi
 
-The can2wifi project uses the popular ESP32 and a CAN transceiver to bridge the CAN bus of a Märklin/Trix 60113 Gleisbox/track box to TCP via WiFi. This allows to monitor and control the same equipment as the Mobile Station(s) 2 using PC software like [Rocrail](https://www.rocrail.online/), a tablet, a mobile or some controller built by yourself.
+The can2wifi project uses the popular ESP32 and a CAN transceiver to bridge the CAN bus of a Märklin/Trix 60113 Gleisbox/track box to TCP via WiFi. This allows to monitor and control the same equipment as your *Mobile Station 2* from PC software like [Rocrail](https://www.rocrail.online/), a tablet, a mobile or some controller built by yourself.
 
 This project is based on the following sources:
 - [ESP8266 und MS2](https://mobatron.4lima.de/2022/05/esp8266-und-ms2) — a similar project using the ESP8266
